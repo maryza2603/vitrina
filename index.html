@@ -10,9 +10,10 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/case-maryza2603-github-io-otel-krym-demo-desktop.webp">
 <meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FAF6F1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* Витрина веб-мастера. Палитра задаётся тремя переменными в :root - их меняет сборка (vitrina.mjs). */
 :root{
@@ -149,6 +150,54 @@ footer{padding:26px 0 40px;color:var(--ink-3);font-size:14px;display:flex;flex-w
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* Стиль портфолио Марии поверх витрины: крем, бежевый, терракота, PT Serif + Manrope. Подмешивается после сборки (apply-style.py). */
+:root{
+  --accent:#B4532F; --ink:#1E1D1B; --soft:#EFE4D8;
+  --paper:#FAF6F1; --line:#E4D9CD; --ink-2:#5C534B; --ink-3:#6E655D;
+  --display:"PT Serif",Georgia,serif; --body:"Manrope",system-ui,sans-serif;
+  --r:18px;
+  --shadow:0 10px 30px -12px rgba(80,45,25,.18);
+}
+body{background:var(--paper);font-weight:500}
+h1,h2,h3{font-weight:700;letter-spacing:-.01em}
+h1{line-height:1.08}
+h1 em{font-style:italic;color:var(--accent)}
+.lead{font-weight:500}
+.eyebrow{text-transform:none;letter-spacing:.01em;font-size:14px;font-weight:700}
+.top{background:rgba(250,246,241,.9)}
+.brand{font-weight:700}
+.btn{font-family:var(--body);font-weight:700;border-radius:14px}
+.btn-main{box-shadow:0 12px 24px -14px rgba(180,83,47,.7)}
+.btn-main:hover{background:#9C4524}
+.btn-ghost{background:#EFE4D8}
+.btn-ghost:hover{background:#E6D6C5}
+.hello{background:#EFE4D8}
+.facts b{font-weight:700}
+.fan::before{background:radial-gradient(closest-side,#EFE4D8,transparent 72%)}
+.phone{box-shadow:0 40px 60px -30px rgba(60,35,20,.5),inset 0 0 0 2px #2A2C33;background:#1E1D1B}
+.phone .notch{background:#1E1D1B}
+section.block{border-top-color:var(--line)}
+.browser{background:#FFFDFA;box-shadow:0 30px 50px -30px rgba(60,35,20,.4),0 0 0 1px var(--line)}
+.browser .bar{background:#EFE4D8}
+.browser .bar i{background:#D9C8B6}
+.badge{letter-spacing:.01em;font-weight:700;border-radius:10px}
+.badge.demo{background:#EFE4D8;color:#5C534B}
+.story li b{text-transform:none;letter-spacing:0;font-size:14px;font-weight:700;color:var(--accent)}
+.quote{background:#EFE4D8;border-radius:var(--r);font-family:var(--display);font-style:italic;font-size:17px;line-height:1.6}
+.quote cite{font-family:var(--body);font-style:normal;font-weight:600;color:#6E655D}
+.case + .case{border-top:1px dashed #D9C8B6}
+.price .sum{font-weight:700}
+.steps li{background:#EFE4D8;border-radius:var(--r)}
+.steps li::before{font-family:var(--display)}
+.final{background:#2B211C;border-radius:24px}
+.final p{color:rgba(255,253,250,.76)}
+.final .btn-ghost{background:rgba(255,253,250,.1);color:#FFFDFA}
+.chat{background:#FFFDFA;border-radius:20px}
+.typing{background:#EFE4D8}
+.toast{background:#2B211C}
+footer{color:#6E655D}
+
+.facts{display:none}
 </style>
 </head>
 <body>
